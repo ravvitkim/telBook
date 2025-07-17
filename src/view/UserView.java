@@ -50,12 +50,12 @@ public class UserView {
         boolean addressOK = true;
         String phone = "";
 
-
         while (addressOK) {
             try {
                 System.out.println("전화번호를 입력하세요");
                 phone = sc.next();
                 validation.phoneCheck(phone);
+                addressOK = false;
             }catch (MyException e) {
                 System.out.println(e.getMessage());
             }
