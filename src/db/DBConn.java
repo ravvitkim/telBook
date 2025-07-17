@@ -28,4 +28,17 @@ public class DBConn {
         }
         return dbConn;
     }
+
+    //DB연결 종료하기
+    public static void close() {
+        try {
+            if (dbConn != null) {
+                //연결되어있다면
+                dbConn.close();
+            }
+        } catch (Exception e) {
+            System.out.println(e.toString());
+        }
+        dbConn = null;
+    }
 }
