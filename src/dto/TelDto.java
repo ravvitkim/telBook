@@ -1,18 +1,24 @@
 package dto;
 
-public class TelDto {
+public class TelDto extends CommonField{
     private int id;
     private String name;
     private int age;
     private String address;
     private String phone;
 
+    @Override
     public String toString() {
-        String str = String.format("아이디 %d \n이름 %s \n나이 %s \n주소 %s \n전화번호 %s \n",
-                id,name,age,address,phone);
-        return str;
+        return "TelDto{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                ", address='" + address + '\'' +
+                ", phone='" + phone + '\'' +
+                ", insertedDate=" +getInsertedDate() + '\'' +
+                ", updatedDate=" +getUpdatedDate() +
+                '}';
     }
-
 
     public int getId() {
         return id;
